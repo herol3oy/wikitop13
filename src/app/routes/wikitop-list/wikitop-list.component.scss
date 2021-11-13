@@ -1,0 +1,19 @@
+.wikitop-list {
+  &__error-message {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
+  &__select-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  &__article-container {
+    direction: rtl;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-gap: 1rem;
+    justify-content: center;
+  }
+}

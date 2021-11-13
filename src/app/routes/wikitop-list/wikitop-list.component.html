@@ -1,0 +1,29 @@
+<div class="wikitop-list">
+  <div class="wikitop-list__select-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Language</mat-label>
+      <mat-select [(value)]="language" (selectionChange)="onLanguageSelect()">
+        <mat-option
+          *ngFor="let language of languages"
+          [value]="language"
+          formControlName="language"
+        >
+          {{ language }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <section *ngIf="errorMessageOnNoArticle" class="wikitop-list__error-message">
+    <h1>{{ errorMessageOnNoArticle }}</h1>
+  </section>
+
+  <section class="wikitop-list__article-container">
+    <div *ngFor="let article of wikiTops">
+      <wikitop-article
+        [article]="article"
+        [language]="language"
+      ></wikitop-article>
+    </div>
+  </section>
+</div>
