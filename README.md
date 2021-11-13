@@ -2,4 +2,4 @@
 
 Wikitop displays top visited articles based on Wikipedia statis.
 
-Stack: Angular version 12.2.0.
+Stack: Angular v 13.0.1
